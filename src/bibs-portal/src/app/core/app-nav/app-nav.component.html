@@ -1,3 +1,75 @@
-<p>app-nav works!</p>
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav
+        #drawer
+        class="sidenav"
+        fixedInViewport
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="(isHandset$ | async) === true"
+    >
+        <mat-toolbar>Menu</mat-toolbar>
+        <mat-nav-list>
+            <a mat-list-item routerLink="/home" routerLinkActive="active">
+                Home
+            </a>
+            <a
+                mat-list-item
+                routerLink="/generators/basic"
+                routerLinkActive="active"
+            >
+                Basic Generator
+            </a>
+            <!-- <a mat-list-item routerLink="/clubs/list" routerLinkActive="active">
+        Clubs
+      </a> -->
+            <a mat-list-item routerLink="/about" routerLinkActive="active">
+                About
+            </a>
+            <a mat-list-item routerLink="/sign-in" routerLinkActive="active">
+                Sign In
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <button
+                type="button"
+                aria-label="Toggle sidenav"
+                mat-icon-button
+                (click)="drawer.toggle()"
+            >
+                <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
+            <span>Page Title Here</span>
+            <!-- Spacer for far right toolbar items -->
+            <span class="example-spacer"></span>
+            <button
+                mat-icon-button
+                [matMenuTriggerFor]="menu"
+                aria-label="Example icon-button with a menu"
+            >
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <!-- <button mat-menu-item *ngIf="isAuthenticated" (click)="auth.signOut()">
+                    <mat-icon>exit_to_app</mat-icon>
+                    <span>Sign Out</span>
+                </button> -->
+            </mat-menu>
+            <!-- Handles spacing for account and alert controls -->
+            <span class="iconSpacer"></span>
 
-<router-outlet></router-outlet>
+            <div id="navEnd">
+                <!-- <mat-icon class="navEndButtons" matBadge="!" matBadgeSize="small" matBadgePosition="before" matBadgeColor="warn"
+                    [matBadgeHidden]="!visible" matTooltip="Notifications" [matMenuTriggerFor]="menu">
+                    notifications
+                </mat-icon> -->
+                </div>
+        </mat-toolbar>
+        <mat-menu #menu="matMenu" class="notificationsmenu">
+            <!-- <app-notification-list></app-notification-list> -->
+        </mat-menu>
+        <!-- Add Content Here -->
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
