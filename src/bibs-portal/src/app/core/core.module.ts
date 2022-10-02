@@ -7,11 +7,11 @@ import { AppNavComponent } from './app-nav/app-nav.component';
 
 @NgModule({
   declarations: [
-  
     AppNavComponent
   ],
   imports: [CommonModule, RouterModule],
   exports: [
+    AppNavComponent
   ],
 })
 export class CoreModule {}

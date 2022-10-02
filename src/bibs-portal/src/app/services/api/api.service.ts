@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 export class ApiService {
     constructor(private http: HttpClient) {}
 
-    /*async post<T>(url: string, body: Object = {}): Promise<HttpResponse<T>> {
+    async post<T>(url: string, body: Object = {}){
         //console.log(`post url ${this.apiServer}${url} with panel: ${body}`);
         return this.http
             .post<T>(
@@ -23,13 +23,13 @@ export class ApiService {
                         ),
                     observe: 'response'
                 }
-            )
-            .pipe()
-            .toPromise();
+            ).subscribe((data) => {
+
+            });
     }
 
     //Used to get data from the API.
-    async get<T>(
+    /*async get<T>(
         url: string,
         responseType: any = null
     ): Promise<HttpResponse<T>> {
