@@ -14,7 +14,8 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [CommonModule, RouterModule, MaterialModule],
   exports: [
-    AppNavComponent
+    AppNavComponent,
+    HomeComponent
   ],
 })
 export class CoreModule {}
