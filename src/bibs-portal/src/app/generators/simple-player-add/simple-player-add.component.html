@@ -1,0 +1,63 @@
+<!-- <p id="basicText">Enter a players' details and click 'Add' to include into a team randomly</p> -->
+<div class="formCentre">
+    <form
+        [formGroup]="playerFormGroup"
+        autocomplete="off"
+        novalidate
+        class="form"
+        (ngSubmit)="onAdd(playerFormGroup.value)"
+    >
+        <mat-form-field class="inputFullWidth">
+            <input
+                matInput
+                placeholder="Player Name"
+                name="name"
+                formControlName="name"
+            />
+            <mat-hint>Player Name</mat-hint>
+            <mat-error *ngIf="hasError('name', 'required')"
+                >Name is required</mat-error
+            >
+        </mat-form-field>
+        <br />
+
+        <mat-form-field class="inputFullWidth">
+            <input
+                matInput
+                placeholder="Email"
+                name="email"
+                formControlName="email"
+            />
+            <mat-hint>Email Address</mat-hint>
+        </mat-form-field>
+        <br />
+        <mat-form-field class="inputFullWidth">
+            <input
+                matInput
+                type="number"
+                placeholder="Rating"
+                name="rating"
+                formControlName="rating"
+            />
+            <mat-hint>Player Rating</mat-hint>
+        </mat-form-field>
+        <br />
+        <br />
+        <button
+            mat-raised-button
+            color="primary"
+            [disabled]="!playerFormGroup.valid"
+            style="margin-right: 10px"
+        >
+            Add
+        </button>
+        <button
+            type="button"
+            mat-raised-button
+            color="warn"
+            (click)="onClear()"
+        >
+            Clear
+        </button>
+    </form>
+</div>
