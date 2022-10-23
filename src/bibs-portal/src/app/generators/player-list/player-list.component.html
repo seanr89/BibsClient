@@ -1,1 +1,29 @@
-<p>player-list works!</p>
+<div>
+    <section fxFlex="100%" fxLayoutAlign="center" class="scrollable">
+        <div class="team-list-section">
+            <h2>Team</h2>
+            <hr />
+            <mat-list>
+                <!-- Name:  {{ player?.name }} - Rating : {{player?.rating}} -->
+                <mat-list-item
+                    mat-list-item
+                    *ngFor="let player of teamPlayers"
+                >
+                    <mat-card class="player-card">
+                        <mat-card-header>
+                            <div
+                                mat-card-avatar
+                                class="example-header-image"
+                            ></div>
+                            <mat-card-title>{{ player?.name }}</mat-card-title>
+                            <mat-card-subtitle
+                                >Rating: {{ player?.rating }}</mat-card-subtitle
+                            >
+                        </mat-card-header>
+                    </mat-card>
+                </mat-list-item>
+            </mat-list>
+        </div>
+    </section>
+    <br />
+</div>

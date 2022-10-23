@@ -1,7 +1,13 @@
 <h2>Basic Team Generator</h2>
 
 <mat-tab-group>
-    <mat-tab label="Enter Player"> Player Enter </mat-tab>
-    <mat-tab label="Team1"> Team 1 </mat-tab>
-    <mat-tab label="Team2"> Team 2 </mat-tab>
+    <mat-tab label="Enter Player">
+        <app-simple-player-add></app-simple-player-add>
+    </mat-tab>
+    <mat-tab label="Team 1"> 
+        <app-player-list></app-player-list> 
+    </mat-tab>
+    <mat-tab label="Team 2">
+        <app-player-list></app-player-list>
+    </mat-tab>
 </mat-tab-group>
