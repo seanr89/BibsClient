@@ -7,7 +7,7 @@ import { DataStateService } from 'src/app/services/datastate.service';
   styleUrls: ['./generator-basic.component.scss']
 })
 export class GeneratorBasicComponent implements OnInit {
-  private pageName = 'Basic Create';
+  private pageName = 'Basic Creator';
 
   constructor(private dataService: DataStateService) {}
 
