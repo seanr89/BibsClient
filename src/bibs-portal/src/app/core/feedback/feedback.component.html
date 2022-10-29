@@ -1,0 +1,39 @@
+
+<!-- <h3>Feedback Form</h3> -->
+
+<div class="formCentre">
+    <form
+        [formGroup]="feedbackFormGroup"
+        autocomplete="off"
+        novalidate
+        class="form"
+        (ngSubmit)="onSubmit(feedbackFormGroup.value)"
+    >
+        <mat-form-field class="inputFullWidth">
+            <input
+                matInput
+                placeholder="Enter Data"
+                name="response"
+                formControlName="response"
+            />
+        </mat-form-field>
+        <br />
+        <hr />
+        <button
+            mat-raised-button
+            color="primary"
+            [disabled]="!feedbackFormGroup.valid"
+            style="margin-right: 10px"
+        >
+            Add
+        </button>
+        <button
+            type="button"
+            mat-raised-button
+            color="warn"
+            (click)="onClear()"
+        >
+            Clear
+        </button>
+    </form>
+</div>
