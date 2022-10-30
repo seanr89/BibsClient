@@ -9,6 +9,7 @@ import { IPlayer } from 'src/app/models/iplayer';
 })
 export class SimplePlayerAddComponent implements OnInit {
   playerFormGroup!: UntypedFormGroup;
+  players: IPlayer[] = [];
 
   @Output() childToParent = new EventEmitter<IPlayer>();
 
@@ -34,12 +35,14 @@ export class SimplePlayerAddComponent implements OnInit {
     }
 
     public onAdd(formData: { name: any; email: any; rating: any; }) {
+        console.log(`onAdd called`);
         const player: IPlayer = {
             name: formData.name,
             email: formData.email,
             rating: formData.rating
         };
-        this.sendToParentAndResetForm(player);
+        this.players.push(player);
+        //this.sendToParentAndResetForm(player);
     }
 
     /**

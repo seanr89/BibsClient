@@ -61,3 +61,28 @@
         </button>
     </form>
 </div>
+
+    <br />
+
+    <div class="player-list">
+        <mat-list>
+            <mat-list-item
+                        mat-list-item
+                        *ngFor="let player of players"
+                    class="player-mat-list-item">
+                    <!-- <h3>{{player.name}}</h3> -->
+                        <mat-card class="player-card">
+                            <mat-card-header>
+                                <!-- <div
+                                    mat-card-avatar
+                                    class="example-header-image"
+                                ></div> -->
+                                <mat-card-title>{{ player.name }}</mat-card-title>
+                                <!-- <mat-card-subtitle
+                                    >Rating: {{ player?.rating }}</mat-card-subtitle
+                                > -->
+                            </mat-card-header>
+                        </mat-card>
+                    </mat-list-item>
+        </mat-list>
+    </div>

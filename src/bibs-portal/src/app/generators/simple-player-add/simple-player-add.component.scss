@@ -6,9 +6,16 @@
 .formCentre {
     margin: auto;
     width: 50%;
+    padding-top: 0.1em;
     //padding: 15px;
 }
 
-#basicText {
-    margin: 0 0 0 0;
+.player-list {
+    height: 50vh;
+    overflow: auto; /* Show scrollbars */
+}
+
+.player-mat-list-item{
+    margin: 1em;
+    padding-bottom: 1em;
 }
