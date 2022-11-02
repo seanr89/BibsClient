@@ -13,6 +13,7 @@ const routes: Routes = [
             (m) => m.GeneratorsModule
         )
   },
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({

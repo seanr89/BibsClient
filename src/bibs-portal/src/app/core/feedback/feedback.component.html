@@ -9,14 +9,14 @@
         class="form"
         (ngSubmit)="onSubmit(feedbackFormGroup.value)"
     >
-        <mat-form-field class="inputFullWidth">
+        <!-- <mat-form-field class="inputFullWidth">
             <input
                 matInput
                 placeholder="Enter Data"
                 name="response"
                 formControlName="response"
             />
-        </mat-form-field>
+        </mat-form-field> -->
         <mat-form-field appearance="fill">
             <mat-label>Feedback Type</mat-label>
             <mat-select>
@@ -25,6 +25,19 @@
               </mat-option>
             </mat-select>
           </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Textarea</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field>
+          <mat-form-field class="inputFullWidth">
+            <input
+                matInput
+                placeholder="Enter Email"
+                name="email"
+                formControlName="email"
+            />
+        </mat-form-field>
+
         <br />
         <hr />
         <button

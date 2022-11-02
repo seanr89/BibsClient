@@ -31,11 +31,14 @@ export class FeedbackComponent implements OnInit {
 
   createForm() {
     this.feedbackFormGroup = new UntypedFormGroup({
+        type: new UntypedFormControl('', [Validators.required]),
         response: new UntypedFormControl('', [Validators.required]),
+        email: new UntypedFormControl(''),
     });
   }
 
   public onSubmit(formData: { }) {
-      //his.sendToParentAndResetForm(player);
+      //this.sendToParentAndResetForm(player);
+      console.log("TODO: save to firebase!");
   }
 }
