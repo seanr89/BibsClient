@@ -17,6 +17,14 @@
                 formControlName="response"
             />
         </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Feedback Type</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let opt of options" [value]="opt">
+                {{opt}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
         <br />
         <hr />
         <button
@@ -25,7 +33,7 @@
             [disabled]="!feedbackFormGroup.valid"
             style="margin-right: 10px"
         >
-            Add
+            Submit
         </button>
         <button
             type="button"

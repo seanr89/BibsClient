@@ -11,6 +11,7 @@ export class FeedbackComponent implements OnInit {
 
   private pageName = 'Site Feedback';
   feedbackFormGroup!: UntypedFormGroup;
+  options: string[] = ["Issue", "Feature", "Comment", "Other"];
 
   constructor(private dataService: DataStateService) {}
 
