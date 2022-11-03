@@ -9,6 +9,8 @@ import { IPlayer } from 'src/app/models/iplayer';
 export class PlayerListComponent implements OnInit {
   teamPlayers: IPlayer[] = [];
 
+  playersAvailable : boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {

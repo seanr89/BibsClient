@@ -2,6 +2,7 @@
 <!-- <h3>Feedback Form</h3> -->
 
 <div class="formCentre">
+    <br />
     <form
         [formGroup]="feedbackFormGroup"
         autocomplete="off"
@@ -9,15 +10,7 @@
         class="form"
         (ngSubmit)="onSubmit(feedbackFormGroup.value)"
     >
-        <!-- <mat-form-field class="inputFullWidth">
-            <input
-                matInput
-                placeholder="Enter Data"
-                name="response"
-                formControlName="response"
-            />
-        </mat-form-field> -->
-        <mat-form-field appearance="fill">
+        <mat-form-field class="inputFullWidth" appearance="fill">
             <mat-label>Feedback Type</mat-label>
             <mat-select>
               <mat-option *ngFor="let opt of options" [value]="opt">
@@ -25,7 +18,7 @@
               </mat-option>
             </mat-select>
           </mat-form-field>
-          <mat-form-field appearance="fill">
+          <mat-form-field class="inputFullWidth" appearance="fill">
             <mat-label>Textarea</mat-label>
             <textarea matInput></textarea>
           </mat-form-field>
@@ -39,7 +32,8 @@
         </mat-form-field>
 
         <br />
-        <hr />
+        <br />
+        <!-- <hr /> -->
         <button
             mat-raised-button
             color="primary"

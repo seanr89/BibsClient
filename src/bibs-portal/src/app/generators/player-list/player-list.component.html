@@ -1,8 +1,11 @@
 <div>
     <section fxFlex="100%" fxLayoutAlign="center" class="scrollable">
         <div class="team-list-section">
-            <h2>Team</h2>
-            <hr />
+            <!-- <h2>Team</h2> -->
+            <!-- <hr /> -->
+            <div *ngIf="!playersAvailable">
+                <h2>Players Not Yet Available</h2>
+            </div>
             <mat-list>
                 <!-- Name:  {{ player?.name }} - Rating : {{player?.rating}} -->
                 <mat-list-item
