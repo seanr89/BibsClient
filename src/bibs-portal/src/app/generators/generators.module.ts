@@ -7,12 +7,14 @@ import { GeneratorBasicComponent } from './generator-basic/generator-basic.compo
 import { PlayerListComponent } from './player-list/player-list.component';
 import { SimplePlayerAddComponent } from './simple-player-add/simple-player-add.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditPlayerDialogComponent } from './edit-player-dialog/edit-player-dialog.component';
 
 @NgModule({
   declarations: [
     GeneratorBasicComponent,
     PlayerListComponent,
-    SimplePlayerAddComponent
+    SimplePlayerAddComponent,
+    EditPlayerDialogComponent
   ],
   imports: [
     CommonModule,

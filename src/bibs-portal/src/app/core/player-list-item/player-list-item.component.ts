@@ -12,4 +12,12 @@ export class PlayerListItemComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  onEditButtonClick(){
+
+  }
+
+  onRemoveButtonClick(){
+    
+  }
 }

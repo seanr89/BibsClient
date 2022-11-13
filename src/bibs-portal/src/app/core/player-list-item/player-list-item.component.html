@@ -3,6 +3,10 @@
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{ player?.name }}</mat-card-title>
       <mat-card-subtitle>Rating: {{ player?.rating }}</mat-card-subtitle>
+      <mat-card-actions align="end">
+        <button mat-button (click)="onEditButtonClick()">Edit</button>
+        <button mat-button (click)="onRemoveButtonClick()">Remove</button>
+      </mat-card-actions>
     </mat-card-header>
   </mat-card>
   

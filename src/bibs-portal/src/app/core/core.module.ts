@@ -9,13 +9,15 @@ import { HomeComponent } from './home/home.component';
 import { PlayerListItemComponent } from './player-list-item/player-list-item.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppNavComponent,
     HomeComponent,
     PlayerListItemComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    AboutComponent
   ],
   imports: [CommonModule, RouterModule, MaterialModule, FormsModule, ReactiveFormsModule],
   exports: [
