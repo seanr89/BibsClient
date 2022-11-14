@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bibleagues": {
+      "hosting": {
+        "portal": [
+          "bibleagues"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bibleagues"
+  }
+}

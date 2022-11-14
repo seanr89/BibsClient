@@ -10,8 +10,9 @@ import { IPlayer } from 'src/app/models/iplayer';
 export class SimplePlayerAddComponent implements OnInit {
   playerFormGroup!: UntypedFormGroup;
   players: IPlayer[] = [];
+  inputPlayer: IPlayer;
 
-  @Output() childToParent = new EventEmitter<IPlayer>();
+  //@Output() childToParent = new EventEmitter<IPlayer>();
 
     ngOnInit(): void {
         this.createForm();
@@ -42,16 +43,16 @@ export class SimplePlayerAddComponent implements OnInit {
             rating: formData.rating
         };
         this.players.push(player);
+        this.inputPlayer = player;
         //this.sendToParentAndResetForm(player);
     }
 
-    /**
-     * Process to send player data out to the parent record
-     * @param player : generated player to be emitted
-     */
-    sendToParentAndResetForm(player: IPlayer) {
-        this.childToParent.emit(player);
-        this.onClear();
-    }
-
+    // /**
+    //  * Process to send player data out to the parent record
+    //  * @param player : generated player to be emitted
+    //  */
+    // sendToParentAndResetForm(player: IPlayer) {
+    //     this.childToParent.emit(player);
+    //     this.onClear();
+    // }
 }

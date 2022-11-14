@@ -24,5 +24,6 @@ import { EditPlayerDialogComponent } from './edit-player-dialog/edit-player-dial
     FormsModule,
     ReactiveFormsModule
   ],
+  entryComponents: [EditPlayerDialogComponent]
 })
 export class GeneratorsModule {}

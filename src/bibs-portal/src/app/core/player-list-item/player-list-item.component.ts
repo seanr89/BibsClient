@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { EditPlayerDialogComponent } from 'src/app/generators/edit-player-dialog/edit-player-dialog.component';
 import { IPlayer } from 'src/app/models/iplayer';
 
 @Component({
@@ -9,12 +11,16 @@ import { IPlayer } from 'src/app/models/iplayer';
 export class PlayerListItemComponent implements OnInit {
   player: IPlayer | undefined;
 
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {}
 
   onEditButtonClick(){
+    const dialogRef = this.dialog.open(EditPlayerDialogComponent);
 
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
   onRemoveButtonClick(){

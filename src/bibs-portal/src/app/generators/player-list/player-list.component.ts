@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IPlayer } from 'src/app/models/iplayer';
 
 @Component({
@@ -8,6 +8,7 @@ import { IPlayer } from 'src/app/models/iplayer';
 })
 export class PlayerListComponent implements OnInit {
   teamPlayers: IPlayer[] = [];
+  @Input('childToMaster') inputPlayer: IPlayer | undefined;
 
   playersAvailable : boolean = false;
 
