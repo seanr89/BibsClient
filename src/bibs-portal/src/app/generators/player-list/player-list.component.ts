@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import { IPlayer } from 'src/app/models/iplayer';
 
 @Component({
@@ -7,7 +7,7 @@ import { IPlayer } from 'src/app/models/iplayer';
   styleUrls: ['./player-list.component.scss']
 })
 export class PlayerListComponent implements OnInit {
-  teamPlayers: IPlayer[] = [];
+  players: IPlayer[] = [];
   @Input('childToMaster') inputPlayer: IPlayer | undefined;
 
   playersAvailable : boolean = false;
@@ -16,5 +16,14 @@ export class PlayerListComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  ngOnChanges(changes: SimpleChanges) {
+    
+    this.players.push(changes['inputPlayer'].currentValue);
+    //this.doSomething(changes.categoryId.currentValue);
+    // You can also use categoryId.previousValue and 
+    // categoryId.firstChange for comparing old and new values
+    
+}
 
 }

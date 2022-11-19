@@ -9,7 +9,7 @@ import { IPlayer } from 'src/app/models/iplayer';
   styleUrls: ['./player-list-item.component.scss']
 })
 export class PlayerListItemComponent implements OnInit {
-  @Input() player!: IPlayer;
+  @Input() player: IPlayer | undefined;
 
   constructor(public dialog: MatDialog) {}
 
