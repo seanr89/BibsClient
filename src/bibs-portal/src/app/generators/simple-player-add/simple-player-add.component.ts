@@ -44,15 +44,5 @@ export class SimplePlayerAddComponent implements OnInit {
         };
         this.players.push(player);
         this.inputPlayer = player;
-        //this.sendToParentAndResetForm(player);
     }
-
-    // /**
-    //  * Process to send player data out to the parent record
-    //  * @param player : generated player to be emitted
-    //  */
-    // sendToParentAndResetForm(player: IPlayer) {
-    //     this.childToParent.emit(player);
-    //     this.onClear();
-    // }
 }

@@ -40,5 +40,6 @@ export class FeedbackComponent implements OnInit {
   public onSubmit(formData: { }) {
       //this.sendToParentAndResetForm(player);
       console.log("TODO: save to firebase!");
+      alert("Submit Not Enabled");
   }
 }
