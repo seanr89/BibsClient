@@ -10,7 +10,7 @@ import { IPlayer } from 'src/app/models/iplayer';
 export class SimplePlayerAddComponent implements OnInit {
   playerFormGroup!: UntypedFormGroup;
   players: IPlayer[] = [];
-  inputPlayer: IPlayer;
+  inputPlayer: IPlayer | undefined;
 
   //@Output() childToParent = new EventEmitter<IPlayer>();
 

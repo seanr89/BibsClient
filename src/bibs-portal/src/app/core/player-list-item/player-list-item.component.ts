@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { EditPlayerDialogComponent } from 'src/app/generators/edit-player-dialog/edit-player-dialog.component';
 import { IPlayer } from 'src/app/models/iplayer';
@@ -9,7 +9,7 @@ import { IPlayer } from 'src/app/models/iplayer';
   styleUrls: ['./player-list-item.component.scss']
 })
 export class PlayerListItemComponent implements OnInit {
-  player: IPlayer | undefined;
+  @Input() player!: IPlayer;
 
   constructor(public dialog: MatDialog) {}
 

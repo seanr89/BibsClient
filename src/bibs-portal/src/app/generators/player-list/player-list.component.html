@@ -9,18 +9,7 @@
                     mat-list-item
                     *ngFor="let player of teamPlayers"
                 >
-                    <mat-card class="player-card">
-                        <mat-card-header>
-                            <div
-                                mat-card-avatar
-                                class="example-header-image"
-                            ></div>
-                            <mat-card-title>{{ player?.name }}</mat-card-title>
-                            <!-- <mat-card-subtitle
-                                >Rating: {{ player?.rating }}</mat-card-subtitle
-                            > -->
-                        </mat-card-header>
-                    </mat-card>
+                    <app-player-list-item [player]="player"></app-player-list-item>
                 </mat-list-item>
             </mat-list>
         </div>
