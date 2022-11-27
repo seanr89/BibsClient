@@ -20,13 +20,7 @@ export class PlayerListComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     if(this.initialized == false)
       return;
-      
-    console.log("ngOnChanges");
     this.players.push(changes['inputPlayer'].currentValue);
-    //this.doSomething(changes.categoryId.currentValue);
-    // You can also use categoryId.previousValue and 
-    // categoryId.firstChange for comparing old and new values
-    
-}
+  }
 
 }

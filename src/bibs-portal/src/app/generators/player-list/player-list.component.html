@@ -1,11 +1,12 @@
 <div>
-    <section fxFlex="100%" fxLayoutAlign="center" class="scrollable">
-        <div class="team-list-section">
+    <section class="team-list-section">
+        <div>
             <!-- <div *ngIf="!playersAvailable">
                 <h2>Players Not Yet Available</h2>
             </div> -->
             <mat-list *ngIf="players.length > 0">
                 <mat-list-item
+                    class="custom-item"
                     mat-list-item
                     *ngFor="let player of players"
                 >
@@ -14,5 +15,5 @@
             </mat-list>
         </div>
     </section>
-    <br />
+    <!-- <br /> -->
 </div>

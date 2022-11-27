@@ -1,5 +1,4 @@
 <div class="formCentre">
-    <br />
     <form
         [formGroup]="playerFormGroup"
         autocomplete="off"
@@ -39,7 +38,6 @@
             />
         </mat-form-field>
         <br />
-        <br />
         <button
             mat-raised-button
             color="primary"
@@ -58,15 +56,12 @@
         </button>
     </form>
 </div>
-
-<br />
+<hr />
 <!-- TODO: needs to be removed -->
 <div class="player-list">
-    <h3>Player Listings</h3>
     <app-player-list [childToMaster]="inputPlayer"></app-player-list>
 </div>
-
-<br />
+<hr />
 <div>
     <button
             mat-raised-button
