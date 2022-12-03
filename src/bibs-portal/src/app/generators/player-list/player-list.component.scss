@@ -9,12 +9,12 @@
     vertical-align: top;
     border: solid 1px white;
     height: 15em;
-    padding: 0 0.5em 0 0.5em;
 }
 
-.custom-item
+// Find out what this is used for!
+.custom-list-item
 {
-    margin: 1.5em
+    height: 100%;
 }
 
 .example-header-image {
@@ -29,10 +29,12 @@
     width: -webkit-fill-available;
 }
 
-.mat-card-header {
-    padding: 3px;
-}
+// .mat-card-header {
+//     padding: 3px;
+// }
 
 .mat-list-item {
-    padding: 2px;
+    padding: 0.1em;
+    height: 100%;
+    width: max-content;
 }

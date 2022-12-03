@@ -1,12 +1,11 @@
-.example-header-image {
+.title-header-image {
     background-image: url('../../../assets//images/001-soccer.svg');
     background-size: cover;
-    // margin: 1px;
 }
 
 .player-card {
     height: inherit;
-    padding: 0;
+    // padding: 0.1em;
     width: -webkit-fill-available;
 }
 

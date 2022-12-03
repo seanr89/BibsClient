@@ -1,12 +1,9 @@
 <div>
     <section class="team-list-section">
         <div>
-            <!-- <div *ngIf="!playersAvailable">
-                <h2>Players Not Yet Available</h2>
-            </div> -->
             <mat-list *ngIf="players.length > 0">
                 <mat-list-item
-                    class="custom-item"
+                    class="custom-list-item"
                     mat-list-item
                     *ngFor="let player of players"
                 >
@@ -16,3 +13,13 @@
         </div>
     </section>
 </div>
+<!-- <hr />
+<div>
+    <button
+            mat-raised-button
+            color="primary"
+            style="margin-right: 10px"
+        >
+            Generate
+        </button>
+</div> -->

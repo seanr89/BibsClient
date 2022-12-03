@@ -18,7 +18,6 @@
             >
         </mat-form-field>
         <br />
-
         <mat-form-field class="inputFullWidth">
             <input
                 matInput
@@ -46,22 +45,22 @@
         >
             Add
         </button>
-        <button
+        <!-- <button
             type="button"
             mat-raised-button
             color="warn"
             (click)="onClear()"
         >
             Clear
-        </button>
+        </button> -->
     </form>
 </div>
+<!-- Display a list of players -->
 <hr />
-<!-- TODO: needs to be removed -->
 <div class="player-list">
     <app-player-list [childToMaster]="inputPlayer"></app-player-list>
 </div>
-<hr />
+<!-- <hr />
 <div>
     <button
             mat-raised-button
@@ -70,4 +69,4 @@
         >
             Generate
         </button>
-</div>
+</div> -->
