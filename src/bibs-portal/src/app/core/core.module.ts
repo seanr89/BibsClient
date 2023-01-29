@@ -10,7 +10,6 @@ import { PlayerListItemComponent } from '../components/players/player-list-item/
 import { FeedbackComponent } from './feedback/feedback.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
-import { PlayersTableComponent } from './players-table/players-table.component';
 import { PlayersModule } from '../components/players/players.module';
 
 @NgModule({
@@ -19,14 +18,12 @@ import { PlayersModule } from '../components/players/players.module';
     HomeComponent,
     FeedbackComponent,
     AboutComponent,
-    PlayersTableComponent
   ],
   imports: [CommonModule, RouterModule, MaterialModule, PlayersModule, FormsModule, ReactiveFormsModule],
   exports: [
     AppNavComponent,
     HomeComponent,
-    FeedbackComponent,
-    PlayersTableComponent,
+    FeedbackComponent
   ],
 })
 export class CoreModule {}
