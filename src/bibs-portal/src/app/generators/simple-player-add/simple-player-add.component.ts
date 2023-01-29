@@ -37,7 +37,6 @@ export class SimplePlayerAddComponent implements OnInit {
      * @param formData : input angular form data
      */
     public onAdd(formData: { name: any; email: any; rating: any; }) {
-        //console.log(`onAdd called`);
         const player: IPlayer = {
             name: formData.name,
             email: formData.email,
@@ -45,5 +44,6 @@ export class SimplePlayerAddComponent implements OnInit {
         };
         this.players.push(player);
         this.inputPlayer = player;
+        this.onClear();
     }
 }
