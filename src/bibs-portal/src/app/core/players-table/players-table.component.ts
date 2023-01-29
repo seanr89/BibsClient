@@ -28,11 +28,11 @@ export class PlayersTableComponent implements OnInit {
   }
 
   onEdit(element: IPlayer): void{
-
+    alert("Not yet implemented!");
   }
 
   onDelete(element: IPlayer): void {
-
+    alert("Not yet implemented!");
   }
 
 }

@@ -6,7 +6,8 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 
 /**
- * Communication service designed provide a method to allow components to interact with each other using a for of "State"
+ * Communication service to allow components to interact with each other using known "State"
+ * with subcribe items!
  */
 export class DataStateService {
   private pageTitle: BehaviorSubject<string>;
@@ -16,7 +17,7 @@ export class DataStateService {
   }
 
   /**
-   * update the current nav pageTitle
+   * Update the current nav pageTitle
    * @param {string} value: the title of the current page/component
    */
   updatePageTitle = (value: string) => {
@@ -24,7 +25,7 @@ export class DataStateService {
   };
 
   /**
-   * request the current pageTitle
+   * Subscribe and return to new nav pageTitle
    * @returns {Observable<string>}: An observable of the current pageTitle
    */
   getPageTitle(): Observable<string> {
