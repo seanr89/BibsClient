@@ -9,12 +9,14 @@ import { SimplePlayerAddComponent } from './simple-player-add/simple-player-add.
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditPlayerDialogComponent } from './edit-player-dialog/edit-player-dialog.component';
 import { PlayersModule } from '../components/players/players.module';
+import { GeneratedTeamsComponent } from './generated-teams/generated-teams.component';
 
 @NgModule({
   declarations: [
     GeneratorBasicComponent,
     SimplePlayerAddComponent,
-    EditPlayerDialogComponent
+    EditPlayerDialogComponent,
+    GeneratedTeamsComponent
   ],
   imports: [
     CommonModule,
