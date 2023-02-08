@@ -11,9 +11,6 @@ export class SimplePlayerAddComponent implements OnInit {
   playerFormGroup!: UntypedFormGroup;
   players: IPlayer[] = [];
   inputPlayer: IPlayer | undefined;
-
-  //@Output() childToParent = new EventEmitter<IPlayer>();
-
     ngOnInit(): void {
         this.createForm();
     }
@@ -35,8 +32,11 @@ export class SimplePlayerAddComponent implements OnInit {
         });
     }
 
+    /**
+     * support the onAdd player button click event
+     * @param formData : input angular form data
+     */
     public onAdd(formData: { name: any; email: any; rating: any; }) {
-        console.log(`onAdd called`);
         const player: IPlayer = {
             name: formData.name,
             email: formData.email,
@@ -44,5 +44,6 @@ export class SimplePlayerAddComponent implements OnInit {
         };
         this.players.push(player);
         this.inputPlayer = player;
+        this.onClear();
     }
 }

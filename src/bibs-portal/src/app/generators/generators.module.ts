@@ -4,17 +4,19 @@ import { MaterialModule } from 'src/app/material/material.module';
 import { CoreModule } from 'src/app/core/core.module';
 import { GeneratorsRoutingModule } from './generators-routing.module';
 import { GeneratorBasicComponent } from './generator-basic/generator-basic.component';
-import { PlayerListComponent } from './player-list/player-list.component';
+import { PlayerListComponent } from '../components/players/player-list/player-list.component';
 import { SimplePlayerAddComponent } from './simple-player-add/simple-player-add.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditPlayerDialogComponent } from './edit-player-dialog/edit-player-dialog.component';
+import { PlayersModule } from '../components/players/players.module';
+import { GeneratedTeamsComponent } from './generated-teams/generated-teams.component';
 
 @NgModule({
   declarations: [
     GeneratorBasicComponent,
-    PlayerListComponent,
     SimplePlayerAddComponent,
-    EditPlayerDialogComponent
+    EditPlayerDialogComponent,
+    GeneratedTeamsComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { EditPlayerDialogComponent } from './edit-player-dialog/edit-player-dial
     MaterialModule,
     CoreModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    PlayersModule
   ],
   entryComponents: [EditPlayerDialogComponent]
 })

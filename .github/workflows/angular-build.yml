@@ -6,11 +6,13 @@ on:
     push:
         branches:
             - main
+            - stage
         paths:
             - 'src/bibs-portal/**'
     pull_request:
         branches:
             - main
+            - stage
         paths:
             - 'src/bibs-portal/**'
     workflow_dispatch:

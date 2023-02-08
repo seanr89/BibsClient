@@ -16,14 +16,15 @@ export class PlayerListItemComponent implements OnInit {
   ngOnInit(): void {}
 
   onEditButtonClick(){
-    const dialogRef = this.dialog.open(EditPlayerDialogComponent);
+    alert("Not yet implemented!!");
+    // const dialogRef = this.dialog.open(EditPlayerDialogComponent);
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log(`Dialog result: ${result}`);
+    // });
   }
 
   onRemoveButtonClick(){
-    
+    alert("Not yet implemented!!");
   }
 }
