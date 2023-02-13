@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { MatTable } from '@angular/material/table';
 import { IPlayer } from 'src/app/models/iplayer';
 
@@ -11,6 +11,7 @@ export class PlayersTableComponent implements OnInit {
   displayedColumns: string[] = ['name', 'email', 'rating', 'actions'];
   dataSource: IPlayer[] = [];
   @Input('childToMaster') inputPlayer: IPlayer | undefined;
+  @Output() newItemEvent = new EventEmitter<IPlayer>();
   initialized=false;
   @ViewChild(MatTable) table: MatTable<IPlayer> | undefined;
 

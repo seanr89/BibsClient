@@ -16,7 +16,8 @@ import { PlayersTableComponent } from './players-table/players-table.component';
     MaterialModule,
   ],
   exports: [
-    PlayerListComponent
+    PlayerListComponent,
+    PlayersTableComponent
   ]
 })
 export class PlayersModule {}

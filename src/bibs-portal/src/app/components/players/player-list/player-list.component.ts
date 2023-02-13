@@ -8,7 +8,7 @@ import { IPlayer } from 'src/app/models/iplayer';
 })
 export class PlayerListComponent implements OnInit, OnChanges {
   players: IPlayer[] = [];
-  @Input('childToMaster') inputPlayer: IPlayer | undefined;
+  // @Input('childToMaster') inputPlayer: IPlayer | undefined;
   initialized=false;
 
   constructor() { }
