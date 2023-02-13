@@ -21,12 +21,15 @@ export class AppNavComponent implements OnInit {
     private breakpointObserver: BreakpointObserver,
     private dataState: DataStateService
     ){
-    //Update the current title
-      this.dataState.getPageTitle().subscribe((res) => {
-      this.pageTitle = res;
-    });
   }
 
   ngOnInit(): void {
+  }
+
+  ngAfterContentInit() : void {
+    //Update the current title
+    this.dataState.getPageTitle().subscribe((res) => {
+      this.pageTitle = res;
+    });
   }
 }

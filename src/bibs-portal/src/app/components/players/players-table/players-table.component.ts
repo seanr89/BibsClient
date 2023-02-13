@@ -11,7 +11,6 @@ export class PlayersTableComponent implements OnInit {
   displayedColumns: string[] = ['name', 'email', 'rating', 'actions'];
   dataSource: IPlayer[] = [];
   @Input('childToMaster') inputPlayer: IPlayer | undefined;
-  @Output() newItemEvent = new EventEmitter<IPlayer>();
   initialized=false;
   @ViewChild(MatTable) table: MatTable<IPlayer> | undefined;
 

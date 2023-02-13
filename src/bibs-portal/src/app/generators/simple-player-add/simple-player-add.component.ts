@@ -9,8 +9,9 @@ import { IPlayer } from 'src/app/models/iplayer';
 })
 export class SimplePlayerAddComponent implements OnInit {
   playerFormGroup!: UntypedFormGroup;
-  players: IPlayer[] = [];
+  //players: IPlayer[] = [];
   inputPlayer: IPlayer | undefined;
+  @Output() newPlayerEvent = new EventEmitter<IPlayer>();
     ngOnInit(): void {
         this.createForm();
     }
@@ -42,8 +43,9 @@ export class SimplePlayerAddComponent implements OnInit {
             email: formData.email,
             rating: formData.rating
         };
-        this.players.push(player);
+        //this.players.push(player);
         this.inputPlayer = player;
+        this.newPlayerEvent.emit(player);
         this.onClear();
     }
 }

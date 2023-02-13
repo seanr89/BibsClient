@@ -1,6 +1,6 @@
 <mat-tab-group>
     <mat-tab label="Create Player">
-        <app-simple-player-add></app-simple-player-add>
+        <app-simple-player-add (newPlayerEvent)="addItem($event)"></app-simple-player-add>
     </mat-tab>
     <mat-tab label="Teams"> 
         <h2>TODO: awaiting player shuffle</h2>

@@ -28,7 +28,12 @@ export class GeneratorBasicComponent implements OnInit {
     alert("generating now!!");
   }
 
+  /**
+   * 
+   * @param newItem 
+   */
   addItem(newItem: IPlayer) {
+    console.log("addItem called");
     this.playerListing.push(newItem);
   }
 }
