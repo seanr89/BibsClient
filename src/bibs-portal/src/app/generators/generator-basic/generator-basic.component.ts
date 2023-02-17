@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IPlayer } from 'src/app/models/iplayer';
 import { DataStateService } from 'src/app/services/datastate.service';
+import { TeamGenerator } from 'src/app/services/generator.service';
 
 @Component({
   selector: 'app-generator-basic',
@@ -26,6 +27,13 @@ export class GeneratorBasicComponent implements OnInit {
   public onGenerate() {
     console.log('onGenerate Clicked!');
     alert("generating now!!");
+
+    let playerLists = TeamGenerator.GenerateShuffle(this.playerListing);
+    
+    let playersOne = playerLists[0];
+    let playersTwo = playerLists[1];
+
+    console.log(`Processed players`);
   }
 
   /**
