@@ -8,8 +8,9 @@ import { IPlayer } from 'src/app/models/iplayer';
 })
 export class PlayerListComponent implements OnInit, OnChanges {
   players: IPlayer[] = [];
-  // @Input('childToMaster') inputPlayer: IPlayer | undefined;
+  @Input('childToMaster') inputPlayers: IPlayer[] | undefined;
   initialized=false;
+
 
   constructor() { }
 
@@ -20,7 +21,7 @@ export class PlayerListComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     if(this.initialized == false)
       return;
-    this.players.push(changes['inputPlayer'].currentValue);
+    this.players = changes['inputPlayers'].currentValue;
   }
 
 }

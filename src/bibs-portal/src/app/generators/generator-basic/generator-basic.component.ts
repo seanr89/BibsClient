@@ -10,8 +10,8 @@ import { TeamGenerator } from 'src/app/services/generator.service';
 })
 export class GeneratorBasicComponent implements OnInit {
   private pageName = 'Basic Creator';
-  // @Input() team1Players: IPlayer[] = [];
-  // @Input() team2Players: IPlayer[] = [];
+  team1Players: IPlayer[] = [];
+  team2Players: IPlayer[] = [];
   playerListing: IPlayer[] = [];
 
 
@@ -26,14 +26,15 @@ export class GeneratorBasicComponent implements OnInit {
    */
   public onGenerate() {
     console.log('onGenerate Clicked!');
-    alert("generating now!!");
+    alert("generating player lists now!!");
 
     let playerLists = TeamGenerator.GenerateShuffle(this.playerListing);
     
-    let playersOne = playerLists[0];
-    let playersTwo = playerLists[1];
+    this.team1Players = playerLists[0];
+    this.team2Players = playerLists[1];
 
-    console.log(`Processed players`);
+    console.log(`Processed team 1 players ${this.team1Players.length}`);
+    console.log(`Processed team 2 players ${this.team2Players.length}`);
   }
 
   /**
