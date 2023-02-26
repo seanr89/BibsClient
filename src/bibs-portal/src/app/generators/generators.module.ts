@@ -7,16 +7,12 @@ import { GeneratorBasicComponent } from './generator-basic/generator-basic.compo
 import { PlayerListComponent } from '../components/players/player-list/player-list.component';
 import { SimplePlayerAddComponent } from './simple-player-add/simple-player-add.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { EditPlayerDialogComponent } from './edit-player-dialog/edit-player-dialog.component';
 import { PlayersModule } from '../components/players/players.module';
-import { GeneratedTeamsComponent } from './generated-teams/generated-teams.component';
 
 @NgModule({
   declarations: [
     GeneratorBasicComponent,
     SimplePlayerAddComponent,
-    EditPlayerDialogComponent,
-    GeneratedTeamsComponent
   ],
   imports: [
     CommonModule,
@@ -27,6 +23,6 @@ import { GeneratedTeamsComponent } from './generated-teams/generated-teams.compo
     ReactiveFormsModule,
     PlayersModule
   ],
-  entryComponents: [EditPlayerDialogComponent]
+  entryComponents: []
 })
 export class GeneratorsModule {}

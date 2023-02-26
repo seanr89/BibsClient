@@ -22,19 +22,18 @@ export class GeneratorBasicComponent implements OnInit {
   }
 
   /**
-   * support on Generate Click
+   * support on Generate Click to create two lists of players to view
    */
   public onGenerate() {
     console.log('onGenerate Clicked!');
-    alert("generating player lists now!!");
+    //alert("generating player lists now!!");
 
     let playerLists = TeamGenerator.GenerateShuffle(this.playerListing);
-    
     this.team1Players = playerLists[0];
     this.team2Players = playerLists[1];
 
-    console.log(`Processed team 1 players ${this.team1Players.length}`);
-    console.log(`Processed team 2 players ${this.team2Players.length}`);
+    console.log(`Processed team 1 player list ${this.team1Players.length}`);
+    console.log(`Processed team 2 player list  ${this.team2Players.length}`);
   }
 
   /**

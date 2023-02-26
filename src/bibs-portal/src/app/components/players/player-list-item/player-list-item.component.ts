@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { EditPlayerDialogComponent } from 'src/app/generators/edit-player-dialog/edit-player-dialog.component';
 import { IPlayer } from 'src/app/models/iplayer';
 
 @Component({

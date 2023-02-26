@@ -2,15 +2,15 @@
     <mat-tab label="Create Player">
         <app-simple-player-add (newPlayerEvent)="addItem($event)"></app-simple-player-add>
     </mat-tab>
+    <!-- Teams tabs for splitting the players -->
     <mat-tab label="Teams"> 
-        <!-- <h2>TODO: awaiting player shuffle</h2> -->
         <mat-tab-group class="stuff">
-                <mat-tab label="Team 1"> 
+            <mat-tab label="Team 1"> 
                 <app-player-list [childToMaster]="team1Players"></app-player-list> 
-                </mat-tab>
-                <mat-tab label="Team 2">
-                    <app-player-list [childToMaster]="team2Players"></app-player-list>
-                </mat-tab>
+            </mat-tab>
+            <mat-tab label="Team 2">
+                <app-player-list [childToMaster]="team2Players"></app-player-list>
+            </mat-tab>
         </mat-tab-group>
     </mat-tab>
 </mat-tab-group>
